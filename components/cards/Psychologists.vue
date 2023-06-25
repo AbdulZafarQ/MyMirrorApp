@@ -8,20 +8,20 @@
     </div>
     <h3 class="text-[#525859] text-2xl my-3">{{psychologist?.name}}</h3>
     <h4 class="text-[#CFB48E] text-xl capitalize">{{psychologist?.type}}</h4>
-    <p class="text-[#525859] text-base mt-2">I am a supportive and encouraging practitioner with a passion for positive and preventative psychology.</p>
-    <p class="text-[#525859] text-lg mt-4">Next session on Monday 9th Nov</p>
+    <p class="text-[#525859] text-sm mt-2">I am a supportive and encouraging practitioner with a passion for positive and preventative psychology.</p>
+    <p class="text-[#525859] text-md mt-4">Next sessions on Monday 26th June</p>
     <div class="flex justify-center gap-2 mt-3 px-2 flex-wrap">
       <button
           v-for="(date, index) in displayedDates"
           :key="index"
-          :class="index === 0 ? 'w-[90px] text-center px-3 text-lg h-[50px] bg-[#2A373A] rounded leading-none text-[#8B9598]':'w-[90px] text-center px-3 text-lg h-[50px] bg-[#B37B37] rounded leading-none text-[#ECDFB5]'"
+          :class="index === 0 ? 'w-[90px] text-center px-3 text-md h-[50px] bg-[#2A373A] rounded leading-none text-[#8B9598]':'w-[90px] text-center px-3 text-md h-[50px] bg-[#B37B37] rounded leading-none text-[#ECDFB5]'"
 
       >
         {{ date }}
       </button>
       <button
           v-if="!showAllDates"
-          class="w-[90px] text-center  text-lg h-[50px] bg-transparent rounded leading-none text-[#CFB48E]"
+          class="w-[90px] text-center  text-md h-[50px] bg-transparent rounded leading-none text-[#B37B37]"
           @click="toggleDates"
       >
         See More
