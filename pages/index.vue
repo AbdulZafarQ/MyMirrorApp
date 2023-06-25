@@ -123,7 +123,7 @@
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
       v-if="filterData.length"
     >
-        <PsychologistCard
+        <Psychologists
           v-for="user in filterData"
           :psychologist="user"
           :key="user.name"
@@ -138,7 +138,7 @@
 </template>
 
 <script setup>
-import PsychologistCard from "@/components/cards/PsychologistCard.vue";
+import Psychologists from "~/components/cards/Psychologists.vue";
 import { onMounted, reactive, ref, watch } from "vue";
 import { useUsersStore } from "@/stores/users";
 import Spinner from "~/components/shared/LoadingData.vue";
